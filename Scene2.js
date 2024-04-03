@@ -52,7 +52,7 @@ class Scene2 extends Phaser.Scene {
         }
 
         // Proceed to the next question or end the quiz
-        // Implement logic for this based on your game flow
+        // Implement logic for this based on game flow
     }
 
     

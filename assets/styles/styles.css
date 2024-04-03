@@ -5,12 +5,12 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    overflow: hidden; /* Prevent background overflow */
+    overflow: hidden;
 }
 
 .canvas-container {
-    width: 700px; /* Set the width of the canvas container */
-    height: 900px; /* Set the height of the canvas container */
+    width: 700px;
+    height: 900px;
     position: relative;
 }
 
@@ -18,7 +18,7 @@ canvas {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%); /* Center the canvas */
+    transform: translate(-50%, -50%);
 }
 
 
