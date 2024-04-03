@@ -5,13 +5,13 @@ class Scene1 extends Phaser.Scene {
     };
     
     
-
     preload() {
+        var host = location.hostname
         this.load.image('background', 'assets/images/quizBackground.jpg');
         WebFont.load({
             custom: {
                 families: ['Catfiles'],
-                urls: ['http://localhost/assets/styles/font.css']
+                urls: [`./assets/styles/font.css`]
             },
             active: () => {
                 this.fontLoaded = true;
