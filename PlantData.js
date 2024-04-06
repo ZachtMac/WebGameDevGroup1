@@ -2,102 +2,102 @@ const plantData = [
     {
         name: "Rose",
         scientificName: "Rosa",
-        possibleAnswers: ["Rose", "Daisy", "Tulip", "Sunflower"]
+        possibleAnswers: ["Daisy", "Sunflower", "Lily", "Rose"]
     },
     {
         name: "Daisy",
         scientificName: "Bellis perennis",
-        possibleAnswers: ["Daisy", "Rose", "Tulip", "Sunflower"]
+        possibleAnswers: ["Tulip", "Sunflower", "Azalea", "Daisy"]
     },
     {
         name: "Tulip",
         scientificName: "Tulipa",
-        possibleAnswers: ["Tulip", "Rose", "Daisy", "Sunflower"]
+        possibleAnswers: ["Peony", "Daisy", "Snapdragon", "Tulip"]
     },
     {
         name: "Sunflower",
         scientificName: "Helianthus annuus",
-        possibleAnswers: ["Sunflower", "Rose", "Daisy", "Tulip"]
+        possibleAnswers: ["Rose", "Sunflower", "Hydrangea", "Tulip"]
     },
     {
         name: "Lily",
         scientificName: "Lilium",
-        possibleAnswers: ["Lily", "Rose", "Daisy", "Tulip"]
+        possibleAnswers: ["Hibiscus", "Lily", "Poppy", "Rose"]
     },
     {
         name: "Orchid",
         scientificName: "Orchidaceae",
-        possibleAnswers: ["Orchid", "Rose", "Daisy", "Tulip"]
+        possibleAnswers: ["Marigold", "Orchid", "Iris", "Tulip"]
     },
     {
         name: "Daffodil",
         scientificName: "Narcissus",
-        possibleAnswers: ["Daffodil", "Rose", "Daisy", "Tulip"]
+        possibleAnswers: ["Fuchsia", "Rose", "Daffodil", "Lavender"]
     },
     {
         name: "Carnation",
         scientificName: "Dianthus caryophyllus",
-        possibleAnswers: ["Carnation", "Rose", "Daisy", "Tulip"]
+        possibleAnswers: ["Hibiscus", "Carnation", "Pansy", "Tulip"]
     },
     {
         name: "Hydrangea",
         scientificName: "Hydrangea",
-        possibleAnswers: ["Hydrangea", "Rose", "Daisy", "Tulip"]
+        possibleAnswers: ["Azalea", "Rose", "Hydrangea", "Lavender"]
     },
     {
         name: "Peony",
         scientificName: "Paeonia",
-        possibleAnswers: ["Peony", "Rose", "Daisy", "Tulip"]
+        possibleAnswers: ["Poppy", "Peony", "Daisy", "Tulip"]
     },
     {
         name: "Azalea",
         scientificName: "Rhododendron",
-        possibleAnswers: ["Azalea", "Rose", "Daisy", "Tulip"]
+        possibleAnswers: ["Tulip", "Azalea", "Marigold", "Daisy"]
     },
     {
         name: "Magnolia",
         scientificName: "Magnolia",
-        possibleAnswers: ["Magnolia", "Rose", "Daisy", "Tulip"]
+        possibleAnswers: ["Rose", "Daisy", "Magnolia", "Tulip"]
     },
     {
         name: "Fuchsia",
         scientificName: "Fuchsia",
-        possibleAnswers: ["Fuchsia", "Rose", "Daisy", "Tulip"]
+        possibleAnswers: ["Iris", "Fuchsia", "Rose", "Tulip"]
     },
     {
         name: "Hibiscus",
         scientificName: "Hibiscus",
-        possibleAnswers: ["Hibiscus", "Rose", "Daisy", "Tulip"]
+        possibleAnswers: ["Hydrangea", "Rose", "Hibiscus", "Tulip"]
     },
     {
         name: "Poppy",
         scientificName: "Papaver",
-        possibleAnswers: ["Poppy", "Rose", "Daisy", "Tulip"]
+        possibleAnswers: ["Daisy", "Poppy", "Rose", "Tulip"]
     },
     {
         name: "Lavender",
         scientificName: "Lavandula",
-        possibleAnswers: ["Lavender", "Rose", "Daisy", "Tulip"]
+        possibleAnswers: ["Lavender", "Daisy", "Rose", "Tulip"]
     },
     {
         name: "Snapdragon",
         scientificName: "Antirrhinum majus",
-        possibleAnswers: ["Snapdragon", "Rose", "Daisy", "Tulip"]
+        possibleAnswers: ["Iris", "Daisy", "Rose", "Snapdragon"]
     },
     {
         name: "Marigold",
         scientificName: "Tagetes",
-        possibleAnswers: ["Marigold", "Rose", "Daisy", "Tulip"]
+        possibleAnswers: ["Rose", "Marigold", "Daisy", "Tulip"]
     },
     {
         name: "Iris",
         scientificName: "Iris",
-        possibleAnswers: ["Iris", "Rose", "Daisy", "Tulip"]
+        possibleAnswers: ["Daisy", "Iris", "Rose", "Tulip"]
     },
     {
         name: "Pansy",
         scientificName: "Viola tricolor",
-        possibleAnswers: ["Pansy", "Rose", "Daisy", "Tulip"]
+        possibleAnswers: ["Daisy", "Pansy", "Rose", "Tulip"]
     }
 ];
 
