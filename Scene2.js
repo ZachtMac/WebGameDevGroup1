@@ -131,6 +131,8 @@ class Scene2 extends Phaser.Scene {
             this.score++;
             console.log(`Correct! Score: ${this.score}`);
             button.setStyle({ backgroundColor: `#008000`}); // make button green
+            this.nextButton.setInteractive();
+
         } else {
             console.log(`Incorrect! Score: ${this.score}`);
             button.setStyle({ backgroundColor: `#FF0000` }); //make button red
@@ -138,6 +140,7 @@ class Scene2 extends Phaser.Scene {
             this.answerButtons.forEach((answerButton) =>{
                 if(answerButton.text === correctAnswer) {
                     answerButton.setStyle({ backgroundColor: `#008000` })
+                    this.nextButton.setInteractive();
                 }
             });
         }
@@ -150,7 +153,6 @@ class Scene2 extends Phaser.Scene {
             answerButton.disableInteractive();
         });
 
-        this.nextButton.setInteractive();
         // Proceed to the next question or end the quiz
         // Implement logic for this based on game flow
     }
