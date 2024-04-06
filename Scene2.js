@@ -41,7 +41,7 @@ class Scene2 extends Phaser.Scene {
         });
 
         //change color on mouse hover
-        this.nextButton.setInteractive();
+        this.nextButton.disableInteractive();
         this.nextButton.on(`pointerover`, () => {
             this.nextButton.setStyle({ backgroundColor: `#5588CC`});
         });                                                                 //hover functionality
@@ -121,7 +121,9 @@ class Scene2 extends Phaser.Scene {
             answerButton.disableInteractive();
         });
 
+
         // Proceed to the next question or end the quiz
+        this.nextButton.setInteractive();
         // Implement logic for this based on game flow
     }
 
