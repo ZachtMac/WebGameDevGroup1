@@ -90,8 +90,9 @@ class Scene2 extends Phaser.Scene {
             this.updateQuestion();
         }
         else{
-            this.scene.start('quizSummary', { score: this.score });
-}
+            //end quiz
+            this.scene.start('summary');
+        }
         });
 
         
