@@ -91,7 +91,7 @@ class Scene2 extends Phaser.Scene {
         }
         else{
             //end quiz
-            this.scene.start('summaryGame');
+        
         }
         });
 
