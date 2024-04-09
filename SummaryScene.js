@@ -1,29 +1,42 @@
 class SummaryScene extends Phaser.Scene {
     constructor() {
-        super("summary");
+        super("summaryGame");
     }
 
     create() {
-        // Display summary text
-        this.add.text(350, 300, 'Quiz Finished!', {
+        // Background
+        this.add.image(0, 0, 'background').setOrigin(0);
+
+        // Display Score
+        const scoreText = `Your Score: ${this.sys.game.global.score}`;
+        this.add.text(350, 450, scoreText, {
             fontFamily: 'Arial',
             fontSize: '32px',
-            color: '#ffffff'
+            color: '#000'
         }).setOrigin(0.5);
 
-        // Add a button to start a new quiz
-        let quizButton = new RoundButton(this, 350, 400, 225, 90, 10, 0x483C32, 0xeeeeee, 'New Quiz', {
+        // New Quiz Button
+        const newQuizButton = this.add.text(350, 550, 'New Quiz', {
             fontFamily: 'Arial',
-            fontSize: '24px',
-            fill: '#ffffff',
-            stroke: '#000',
-            strokeThickness: 4,
-            align: 'center',
-            padding: { x: 10, y: 5 }
+            fontSize: '28px',
+            color: '#fff',
+            backgroundColor: '#5cb85c',
+            padding: { x: 10, y: 5 },
+            align: 'center'
+        }).setInteractive().setOrigin(0.5);
+
+        newQuizButton.on('pointerdown', () => {
+            // Reset score or any other global variables if needed
+            this.sys.game.global.score = 0;
+            this.scene.start('bootGame'); // Change to your initial scene to restart the game
         });
 
-        quizButton.on('pointerdown', () => {
-            this.scene.start('bootGame'); // Restart the quiz
+        newQuizButton.on('pointerover', () => {
+            newQuizButton.setStyle({ backgroundColor: '#77d977' });
+        });
+
+        newQuizButton.on('pointerout', () => {
+            newQuizButton.setStyle({ backgroundColor: '#5cb85c' });
         });
     }
 }
