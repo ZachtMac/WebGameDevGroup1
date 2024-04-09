@@ -39,6 +39,7 @@ class Scene2 extends Phaser.Scene {
         this.add.image(0, 0, 'background').setOrigin(0);
         this.quizPlants = getRandomPlants(10);
         this.currentPlant = this.quizPlants[0];
+        this.registry.set('score', 0);
 
         this.add.text(350, 100, "Guess the plant:", {
             fontFamily: 'Arial',
@@ -91,7 +92,7 @@ class Scene2 extends Phaser.Scene {
         }
         else{
             //end quiz
-        
+            this.scene.start('Scene3');
         }
         });
 
@@ -127,36 +128,26 @@ class Scene2 extends Phaser.Scene {
         //     });
         // });
     }
+    
     handleAnswer(selectedAnswer, correctAnswer, button) {
-        if (selectedAnswer === correctAnswer) {
-            this.score++;
-            console.log(`Correct! Score: ${this.score}`);
-            button.setStyle({ backgroundColor: `#008000`}); // make button green
-            this.nextButton.setInteractive();
-
-        } else {
-            console.log(`Incorrect! Score: ${this.score}`);
-            button.setStyle({ backgroundColor: `#FF0000` }); //make button red
-            //find correct answer button and make it green
-            this.answerButtons.forEach((answerButton) =>{
-                if(answerButton.text === correctAnswer) {
-                    answerButton.setStyle({ backgroundColor: `#008000` })
-                    this.nextButton.setInteractive();
-                }
-            });
+        let correct = selectedAnswer === correctAnswer;
+        if (correct) {
+            let score = this.registry.get('score');
+            this.registry.set('score', ++score);
         }
 
+        button.setStyle({ backgroundColor: correct ? `#008000` : `#FF0000` }); // Green for correct, red for incorrect
+        this.answerButtons.forEach(btn => btn.disableInteractive());
 
+        if(correct) {
+            console.log(`Correct! Score: ${this.registry.get('score')}`);
+        } else {
+            console.log(`Incorrect. The correct answer was ${correctAnswer}.`);
+        }
 
-        //disable buttons until next question
-        this.answerButtons.forEach((answerButton) =>{
-            answerButton.clicked = false;
-            answerButton.disableInteractive();
-        });
-
-        // Proceed to the next question or end the quiz
-        // Implement logic for this based on game flow
+        this.nextButton.setInteractive(); // Enable the next button
     }
+
 
     updateQuestion(){
         //clear the array
