@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 class RoundButton extends Phaser.GameObjects.Container {
     constructor(scene, x, y, width, height, radius, fillColor, hoverColor, text, textStyle) {
         super(scene, x, y);
