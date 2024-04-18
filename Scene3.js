@@ -25,7 +25,7 @@ class Scene3 extends Phaser.Scene {
 
         // Display the score
         this.add.text(this.cameras.main.centerX, this.cameras.main.centerY - 100, `Final Score: ${score}`, {
-            fontFamily: 'Catfiles',
+            fontFamily: 'Arial',
             fontSize: '48px',
             color: '#ffffff',
             stroke: '#000',
@@ -33,7 +33,7 @@ class Scene3 extends Phaser.Scene {
         }).setOrigin(0.5);
 
         let restartBtn = new RoundButton(this, 350, 590, 280, 130, 10, 0x483C32, 0xeeeeee, 'Restart Quiz!', {
-            fontFamily: 'Catfiles',
+            fontFamily: 'Arial',
             fontSize: '32px',
             fill: '#ffffff',
             stroke: '#000',
