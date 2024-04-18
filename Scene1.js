@@ -23,12 +23,13 @@ class Scene1 extends Phaser.Scene {
     create() {
         this.add.image(0, 0, 'background').setOrigin(0);
 
-        this.events.once('fontloaded', () => {
+        //this.events.once('fontloaded', () => {
             this.loadText();
-        });
+        //});
         if (!this.fontLoaded) {
             console.warn('Loading...');
         }
+        this.loadText();
 
         this.loadGeoLocation();
     }
