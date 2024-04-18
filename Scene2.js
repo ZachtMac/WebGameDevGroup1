@@ -53,7 +53,7 @@ class Scene2 extends Phaser.Scene {
         this.registry.set('score', 0);
 
         this.add.text(350, 100, "Guess the plant:", {
-            fontFamily: 'Catfiles',
+            fontFamily: 'Arial',
             fontSize: '45px',
             fill: '#008000',
             stroke: '#000',
@@ -101,7 +101,7 @@ class Scene2 extends Phaser.Scene {
         this.currentPlant.possibleAnswers.forEach((answer, index) => {
             const buttonX = 100 + index * buttonSpacing;
             const button = this.add.text(buttonX, buttonY, answer, {
-                fontFamily: 'Catfiles',
+                fontFamily: 'Arial',
                 fontSize: '20px',
                 color: '#ffffff',
                 stroke: '#000',
@@ -138,7 +138,7 @@ class Scene2 extends Phaser.Scene {
         });
 
             this.nextButton = this.add.text(240, 820, 'Next Question',{
-                fontFamily: `Catfiles`,
+                fontFamily: `Arial`,
                 fontSize: `24px`,
                 color: `#ffffff`,
                 backgroundColor: `#336699`,

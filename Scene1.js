@@ -36,7 +36,7 @@ class Scene1 extends Phaser.Scene {
     loadText() {
         
         let titleText = this.add.text(120, 280, 'Plant Quiz!', { 
-            fontFamily: 'Catfiles', 
+            fontFamily: 'Arial', 
             fontSize: '70px',
             fill: '#008000',
             stroke: '#000',
@@ -46,7 +46,7 @@ class Scene1 extends Phaser.Scene {
 
 
         let playButton = new RoundButton(this, 350, 480, 225, 90, 10, 0x483C32, 0xeeeeee, 'Play', {
-            fontFamily: 'Catfiles',
+            fontFamily: 'Arial',
             fontSize: '32px',
             fill: '#ffffff',
             stroke: '#000',
